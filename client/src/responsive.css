@@ -1,0 +1,598 @@
+/* ==================================================
+   RESPONSIVE.CSS
+================================================== */
+
+
+/* ===============================
+   Laptop Besar
+================================ */
+
+@media (max-width:1400px){
+
+.container{
+
+    width:92%;
+
+}
+
+.hero h1{
+
+    font-size:58px;
+
+}
+
+}
+
+
+/* ===============================
+   Laptop
+================================ */
+
+@media (max-width:1200px){
+
+.hero-content{
+
+    gap:40px;
+
+}
+
+.about-wrapper{
+
+    gap:40px;
+
+}
+
+.program-grid{
+
+    gap:25px;
+
+}
+
+.section{
+
+    padding:90px 0;
+
+}
+
+}
+
+
+/* ===============================
+   Tablet Landscape
+================================ */
+
+@media (max-width:992px){
+
+.nav-menu{
+
+    position:fixed;
+
+    top:90px;
+
+    right:-100%;
+
+    width:280px;
+
+    height:100vh;
+
+    background:#fff;
+
+    flex-direction:column;
+
+    justify-content:flex-start;
+
+    align-items:flex-start;
+
+    padding:40px;
+
+    transition:.4s;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.1);
+
+}
+
+.nav-menu.active{
+
+    right:0;
+
+}
+
+.nav-menu li{
+
+    width:100%;
+
+}
+
+.nav-menu li a{
+
+    display:block;
+
+    color:#111 !important;
+
+    padding:15px 0;
+
+}
+
+.menu-toggle{
+
+    display:block;
+
+}
+
+.hero{
+
+    height:auto;
+
+    padding:160px 0 100px;
+
+}
+
+.hero-content{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+}
+
+.hero-left{
+
+    order:2;
+
+}
+
+.hero-right{
+
+    order:1;
+
+}
+
+.hero-button{
+
+    justify-content:center;
+
+}
+
+.hero-card{
+
+    max-width:500px;
+
+    margin:auto;
+
+}
+
+.about-wrapper{
+
+    grid-template-columns:1fr;
+
+}
+
+.about-image{
+
+    margin-bottom:40px;
+
+}
+
+.program-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.impact-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.timeline-item{
+
+    flex-direction:column !important;
+
+    align-items:flex-start;
+
+    padding-left:80px;
+
+}
+
+.timeline-wrapper::before{
+
+    left:35px;
+
+}
+
+.timeline-year{
+
+    position:absolute;
+
+    left:0;
+
+    width:70px;
+
+    height:70px;
+
+    font-size:18px;
+
+}
+
+.timeline-content{
+
+    width:100%;
+
+}
+
+.gallery-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.testimonial-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.footer-grid{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+}
+
+}
+
+
+/* ===============================
+   Tablet Portrait
+================================ */
+
+@media (max-width:768px){
+
+.section{
+
+    padding:70px 0;
+
+}
+
+.hero h1{
+
+    font-size:42px;
+
+}
+
+.hero p{
+
+    font-size:16px;
+
+}
+
+.section-title h2{
+
+    font-size:34px;
+
+}
+
+.about-content h2{
+
+    font-size:34px;
+
+}
+
+.about-image img{
+
+    height:420px;
+
+}
+
+.experience-box{
+
+    width:140px;
+
+    padding:18px;
+
+}
+
+.experience-box h2{
+
+    font-size:38px;
+
+}
+
+.gallery-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.gallery-grid figure{
+
+    grid-column:unset !important;
+
+    grid-row:unset !important;
+
+}
+
+.impact-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.cta h2{
+
+    font-size:34px;
+
+}
+
+.btn-outline{
+
+    display:none;
+
+}
+
+}
+
+
+/* ===============================
+   Mobile
+================================ */
+
+@media (max-width:576px){
+
+.navbar{
+
+    height:75px;
+
+}
+
+.logo{
+
+    font-size:20px;
+
+}
+
+.btn-primary{
+
+    padding:12px 24px;
+
+    font-size:14px;
+
+}
+
+.hero{
+
+    padding:130px 0 70px;
+
+}
+
+.hero h1{
+
+    font-size:34px;
+
+}
+
+.hero p{
+
+    font-size:15px;
+
+}
+
+.hero-card{
+
+    padding:25px;
+
+}
+
+.hero-stat h2{
+
+    font-size:34px;
+
+}
+
+.section-title h2{
+
+    font-size:28px;
+
+}
+
+.about-content h2{
+
+    font-size:30px;
+
+}
+
+.program-content{
+
+    padding:25px;
+
+}
+
+.program-content h3{
+
+    font-size:22px;
+
+}
+
+.timeline-content{
+
+    padding:20px;
+
+}
+
+.timeline-year{
+
+    width:60px;
+
+    height:60px;
+
+    font-size:16px;
+
+}
+
+.testimonial-card{
+
+    padding:25px;
+
+}
+
+.cta{
+
+    padding:70px 20px;
+
+}
+
+.cta h2{
+
+    font-size:28px;
+
+}
+
+.cta p{
+
+    font-size:15px;
+
+}
+
+.footer-grid{
+
+    gap:30px;
+
+}
+
+.copyright{
+
+    font-size:13px;
+
+}
+
+}
+
+
+/* ===============================
+   Mobile Kecil
+================================ */
+
+@media (max-width:390px){
+
+.hero h1{
+
+    font-size:30px;
+
+}
+
+.hero-button{
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.btn-primary{
+
+    width:100%;
+
+}
+
+.hero-card{
+
+    padding:20px;
+
+}
+
+.about-image img{
+
+    height:320px;
+
+}
+
+.section-title h2{
+
+    font-size:24px;
+
+}
+
+.about-content h2{
+
+    font-size:26px;
+
+}
+
+.cta h2{
+
+    font-size:24px;
+
+}
+
+}
+
+@media (max-width:768px){
+
+    .visi-grid{
+        grid-template-columns:1fr;
+    }
+
+    .visi-card{
+        padding:30px;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .visi-misi {
+        padding: 80px 5%;
+    }
+
+    .section-title h2 {
+        font-size: 38px;
+    }
+
+    .visi-misi-container {
+        grid-template-columns: 1fr;
+    }
+
+    .visi-misi-card {
+        min-height: auto;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .visi-misi {
+        padding: 60px 20px;
+    }
+
+    .section-title {
+        margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .section-title p {
+        font-size: 16px;
+    }
+
+    .visi-misi-card {
+        padding: 30px 25px;
+        border-radius: 18px;
+    }
+
+    .visi-misi-card h3 {
+        font-size: 28px;
+    }
+
+    .visi-misi-card > p,
+    .visi-misi-card li {
+        font-size: 16px;
+    }
+}
+/* React navigation uses buttons instead of anchor tags. */
+@media (max-width: 992px) {
+  .nav-menu li button { display: block; color: #111 !important; }
+}
