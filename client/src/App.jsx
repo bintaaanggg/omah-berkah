@@ -243,10 +243,6 @@ function DonateModal(){
 
     <div className="confirm-warning"><i className="fa-solid fa-circle-info"/><span>Ini pengajuan donasi, bukan pembayaran otomatis. Setelah menekan tombol Konfirmasi, tim Omah Berkah akan menghubungimu untuk proses pembayaran.</span></div>
 
-    {donate.paymentMethod==='qris' && <div className="qris-box">
-     <img src={asset('qris-omahberkah.jpg')} alt="QRIS Yi Shun Shin shop"/>
-     <p><i className="fa-solid fa-circle-check"/> Scan QR di atas dengan aplikasi e-wallet/m-banking favoritmu, lalu masukkan nominal <strong>{rupiah(donate.amount)}</strong> dan selesaikan pembayaran.</p>
-    </div>}
 
     <div className="confirm-actions">
      <button type="button" className="btn-outline-modal" onClick={()=>setStep(1)}>Kembali</button>
@@ -388,7 +384,7 @@ function WhatsAppFloatButton(){
 }
 
 function Footer(){
-  return <footer className="footer" id="kontak-footer"><div className="container footer-grid"><div className="footer-about"><h2><i className="fa-solid fa-leaf"/> LSM Omah Berkah</h2><p>Bergerak dalam bidang pendidikan, kesehatan, lingkungan, pemberdayaan masyarakat, dan Kawi Farm.</p></div><div className="footer-menu"><h3>Menu</h3><ul>{NAV_ITEMS.map(item=><li key={item.to}><Link to={item.to}>{item.label}</Link></li>)}</ul></div><div className="footer-contact"><h3>Kontak</h3><p><i className="fa-solid fa-location-dot"/> Malang, Jawa Timur</p><p><i className="fa-solid fa-phone"/> +62 822-6418-3926</p><p><i className="fa-solid fa-envelope"/> info@omahberkah.org</p></div><div className="footer-social"><h3>Ikuti Kami</h3><div className="social-icons"><a href="https://www.facebook.com/" aria-label="Facebook"><i className="fab fa-facebook-f"/></a><a href="https://www.instagram.com/bntgrmdhan._/" aria-label="Instagram"><i className="fab fa-instagram"/></a><a href="https://www.youtube.com/@Gustixa" aria-label="YouTube"><i className="fab fa-youtube"/></a><a href="https://wa.me/6282264183926" target="_blank" rel="noreferrer"><i className="fab fa-whatsapp"/></a></div></div></div><div className="copyright">© 2026 LSM Omah Berkah. All Rights Reserved.</div></footer>;
+  return <footer className="footer" id="kontak-footer"><div className="container footer-grid"><div className="footer-about"><h2><i className="fa-solid fa-leaf"/> LSM Omah Berkah</h2><p>Bergerak dalam bidang pendidikan, kesehatan, lingkungan, pemberdayaan masyarakat, dan Kawi Farm.</p></div><div className="footer-menu"><h3>Menu</h3><ul>{NAV_ITEMS.map(item=><li key={item.to}><Link to={item.to}>{item.label}</Link></li>)}</ul></div><div className="footer-contact"><h3>Kontak</h3><p><i className="fa-solid fa-location-dot"/> Malang, Jawa Timur</p><p><i className="fa-solid fa-phone"/> +62 822-6418-3926</p><p><i className="fa-solid fa-envelope"/> info@omahberkah.org</p></div><div className="footer-social"><h3>Ikuti Kami</h3><div className="social-icons"><a href="#" aria-label="Facebook"><i className="fab fa-facebook-f"/></a><a href="#" aria-label="Instagram"><i className="fab fa-instagram"/></a><a href="#" aria-label="YouTube"><i className="fab fa-youtube"/></a><a href="https://wa.me/6282264183926" target="_blank" rel="noreferrer"><i className="fab fa-whatsapp"/></a></div></div></div><div className="copyright">© 2026 LSM Omah Berkah. All Rights Reserved.</div></footer>;
 }
 
 function PageBanner({eyebrow,title,subtitle,icon,variant='forest'}){

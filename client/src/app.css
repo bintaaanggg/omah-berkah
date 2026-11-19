@@ -154,7 +154,7 @@
   display: none;
   align-items: center;
   justify-content: center;
-  z-index: 999;
+  z-index: 3000; /* di atas navbar (2000) dan scroll-progress (2100) */
   padding: 20px;
 }
 
