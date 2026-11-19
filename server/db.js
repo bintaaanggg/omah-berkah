@@ -33,7 +33,7 @@ async function initDatabase() {
   pool = mysql.createPool(config);
 
   // Tables are also ensured here so a deployment can start without manually importing SQL.
-  await pool.query(`
+  const ddl = `
     CREATE TABLE IF NOT EXISTS users (
       id INT UNSIGNED NOT NULL AUTO_INCREMENT,
       fullname VARCHAR(120) NOT NULL,
@@ -125,7 +125,18 @@ async function initDatabase() {
       CONSTRAINT fk_donations_program FOREIGN KEY (program_id) REFERENCES programs(id) ON DELETE SET NULL,
       CONSTRAINT fk_donations_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE SET NULL
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-  `);
+  `;
+
+  // Jalankan satu per satu supaya kalau ada error, kelihatan tabel mana yang bermasalah.
+  for (const stmt of ddl.split(';').map(x => x.trim()).filter(Boolean)) {
+    try {
+      await pool.query(stmt);
+    } catch (err) {
+      const name = (stmt.match(/CREATE TABLE IF NOT EXISTS\s+(\w+)/i) || [])[1] || 'unknown';
+      err.message = `[tabel ${name}] ${err.message}`;
+      throw err;
+    }
+  }
 
   // Backward-compatible migration for databases created before user_id existed.
   try {
